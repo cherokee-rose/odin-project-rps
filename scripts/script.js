@@ -19,9 +19,9 @@ const inputButtons = document.getElementsByClassName("input");
 const moveNames = ['rock', 'paper', 'scissors'];
 
 const imageURLs = {
-    rock: '../images/' + moveNames[0] + '.png',
-    paper: '../images/' + moveNames[1] + '.png',
-    scissors: '../images/' + moveNames[2] + '.png'   
+    rock: './images/' + moveNames[0] + '.png',
+    paper: './images/' + moveNames[1] + '.png',
+    scissors: './images/' + moveNames[2] + '.png'   
 };
 
 const checkClassName = 'fa-check';
