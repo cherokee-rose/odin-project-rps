@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rock Paper Scissors</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a href="" class="navbar-brand">Rock Paper Scissors</a>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a id="start-btn" class="nav-link">New Game</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href=""
+                           class="nav-link dropdown-toggle"
+                           id="modeDropdown"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                               aria-expanded="false"
+                        >
+                            Mode</a>
+                        <ul class="dropdown-menu" aria-labelledby="modeDropdown">
+                            <li><a class="dropdown-item active">BEST OF 3</a></li>
+                            <li><a class="dropdown-item">BEST OF 5</a></li>
+                            <li><a class="dropdown-item">DEUCE</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Playground section -->
+    <section class="" style="height: 100vh;">
+        <div class="container h-100">
+            <div class="row row-cols-1 justify-content-center align-items-center h-100">
+                <div class="row col">
+                    <div class="col-5 col-sm-3 h4">Computer score: <span id="computer-score"></span></div>
+                    <div class="col-5 offset-2 col-sm-3 offset-sm-6 h4">Playing mode: <span id="game-mode-display">BEST OF 3</span></div>
+                </div>
+                <div class="col h-50">
+                    <div class="row-cols-1 h-100 col-5 m-auto p-1">
+                        <div class="col border-bottom border-dark border-5 h-50 p-1">
+                            <i id="computer-icon" class="fas"></i>
+                            <img id="computer-move-display" class="m-auto" src="" height="100%" alt="">
+                        </div>
+                        <div class="col h-50 p-1">
+                            <i id="user-icon" class="fas"></i>
+                            <img id="user-move-display" class="m-auto" src="" height="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row col align-items-end">
+                    <div class="col-4">
+                        <div class="h4">Your score: <span id="user-score"></span></div>
+                    </div>
+                    <div class="col col-sm-4">
+                        <div class="d-flex">
+                            <a id="rock" class="btn input"><img src="images/rock.png" alt=""></a>
+                            <a id="paper" class="btn input"><img src="images/paper.png" alt=""></a>
+                            <a id="scissors" class="btn input"><img src="images/scissors.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light p-5" id="about">
+        <div class="container">
+            <h1 class="text-center mb-5">About</h1>
+            <div class="row flex-column flex-lg-row">
+                <div class="col-6 col-lg-4 align-self-center">
+                    <img src="images/about.png" alt="" class="">
+                </div>
+                <div class="col"> 
+                    <p><b>Rock paper scissors</b> (also known by other orderings of the three items, with "rock" sometimes being called "stone") 
+                        is a hand game, usually played between two people, in which each player simultaneously forms one of three shapes with an 
+                        outstretched hand. These shapes are "rock" (a closed fist), "paper" (a flat hand), and "scissors" (a fist with the index finger 
+                        and middle finger extended, forming a V). "Scissors" is identical to the two-fingered V sign (also indicating "victory" or "peace") 
+                        except that it is pointed horizontally instead of being held upright in the air.
+                    </p>
+                    <p>Rock paper scissors is often used as a fair choosing method between two people, similar to coin flipping, drawing straws, 
+                    or throwing dice in order to settle a dispute or make an unbiased group decision. Unlike truly random selection methods, however, 
+                    <mark>rock paper scissors can be played with a degree of skill by recognizing and exploiting non-random behavior in opponents</mark>.
+                    </p>
+                    <p>Rock paper scissors is often used as a fair choosing method between two people, similar to coin flipping, drawing straws, 
+                    or throwing dice in order to settle a dispute or make an unbiased group decision. Unlike truly random selection methods, however, 
+                    <mark>rock paper scissors can be played with a degree of skill by recognizing and exploiting non-random behavior in opponents</mark>.
+                    </p> 
+                </div>
+            </div>
+            <br>
+            <h4>Modes</h4> 
+            <ul>
+                <li>
+                    <h6>BEST OF 3</h6>             
+                <p>A <b>best-of-three playoff</b> is a head-to-head competition between two teams(in this case players) in which one team must win two games to win the series. 
+                   Two is chosen as it constituted a majority of the games played; if one team wins both of the first two games, game 3 is not played.
+                </p>
+                </li>
+                <li>
+                    <h6>BEST OF 5</h6>
+                    <p>A <b>best-of-five playoff</b> is a head-to-head competition between two teams, wherein one must win three games to win the series. 
+                       Three is chosen as it constituted a majority of games played. If one team wins the series before reaching game 5, all others are ignored.</p>
+                </li>
+                <li>
+                    <h6>DEUCE</h6>
+                    <p>
+                        <b>Deuce</b> is the tie score of 40-all in a tennis game, at which a player needs two consecutive points to win the game.
+                        In the context of a rock paper scissors game, the game if finished when on of the players has a 2 points advantage over the 
+                        other player.
+                    </p>
+                </li>
+            </ul>  
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark p-4">
+        <div class="container text-center mt-3">
+            <p class="text-light">
+                Created by <a class="link-secondary" href="https://github.com/cherokee-rose">Yauheni Khvashcheuski</a> &copy; 2021
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="scripts/script.js"></script>
+  </body>
